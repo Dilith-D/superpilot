@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import priyaAvatar from "@/assets/priya-mehta.jpg";
+import { ROICalculator } from "@/components/crm/ROICalculator";
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
@@ -12,6 +13,7 @@ function LandingPage() {
       <Hero />
       <RelayRace />
       <IntelligenceSurfaces />
+      <ROISection />
       <FinalCTA />
       <SiteFooter />
     </div>
@@ -449,6 +451,64 @@ function Dot({ color, label }: { color: "emerald" | "sp" | "amber"; label: strin
       <div className={`size-1.5 rounded-full ${c}`} />
       <span className="text-[11px] font-mono text-[var(--text-secondary)]">{label}</span>
     </div>
+  );
+}
+
+const ROI_STATS = [
+  { value: "24 min", label: "saved per call on prep & admin" },
+  { value: "2 hrs", label: "recovered per rep, per day" },
+  { value: "65%", label: "reduction in admin time" },
+  { value: "6–8 wks", label: "new rep ramp vs 3–4 months" },
+];
+
+function ROISection() {
+  const IND = "#6366F1"; const EME = "#10B981";
+  const SPC = "#0F0F1C"; const BOR = "#1E1E2E";
+  const TX1 = "#F5F5F5"; const TX2 = "#8B8B9A"; const MUT = "#4B4B5A"; const BG = "#0A0A0F";
+  const SG = '"Space Grotesk", system-ui, sans-serif';
+  const DM = '"DM Sans", system-ui, sans-serif';
+  const JB = '"JetBrains Mono", ui-monospace, monospace';
+
+  return (
+    <section style={{ background: BG, borderTop: `1px solid #1a1a2e` }}>
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "80px 32px" }}>
+        {/* Header */}
+        <div style={{ marginBottom: 48 }}>
+          <p style={{ fontFamily: JB, fontSize: 11, color: IND, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: 12 }}>
+            Business impact
+          </p>
+          <h2 style={{ fontFamily: SG, fontSize: 32, fontWeight: 700, color: TX1, letterSpacing: "-0.02em", marginBottom: 12, lineHeight: 1.2 }}>
+            The numbers are straightforward.
+          </h2>
+          <p style={{ fontFamily: DM, fontSize: 16, color: TX2, lineHeight: 1.65, maxWidth: 520 }}>
+            SuperPilot recovers time your reps currently spend on admin. That time becomes calls. Calls become revenue.
+          </p>
+        </div>
+
+        {/* Stat row */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 48 }}>
+          {ROI_STATS.map((s) => (
+            <div key={s.value} style={{ background: SPC, border: `1px solid ${BOR}`, borderRadius: 10, padding: "20px 18px" }}>
+              <p style={{ fontFamily: SG, fontSize: 26, fontWeight: 700, color: EME, margin: "0 0 6px", letterSpacing: "-0.02em" }}>{s.value}</p>
+              <p style={{ fontFamily: DM, fontSize: 12, color: TX2, margin: 0, lineHeight: 1.5 }}>{s.label}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Calculator */}
+        <ROICalculator />
+
+        {/* CTA */}
+        <div style={{ marginTop: 40, textAlign: "center" }}>
+          <a href="/login" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: IND, color: "#fff", fontFamily: SG, fontSize: 14, fontWeight: 600, padding: "12px 28px", borderRadius: 8, textDecoration: "none", boxShadow: `0 0 28px ${IND}50` }}>
+            Model your team's numbers →
+          </a>
+          <p style={{ fontFamily: JB, fontSize: 10, color: MUT, textTransform: "uppercase", letterSpacing: "0.2em", marginTop: 14 }}>
+            No credit card · Free pilot · 14-day onboarding
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 

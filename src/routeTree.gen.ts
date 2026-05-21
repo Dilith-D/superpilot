@@ -15,6 +15,10 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppCrmRouteImport } from './routes/_app.crm'
 import { Route as AppCrmIndexRouteImport } from './routes/_app.crm.index'
 import { Route as AppCrmTasksRouteImport } from './routes/_app.crm.tasks'
+import { Route as AppCrmRoiRouteImport } from './routes/_app.crm.roi'
+import { Route as AppCrmRoadmapRouteImport } from './routes/_app.crm.roadmap'
+import { Route as AppCrmIndustriesRouteImport } from './routes/_app.crm.industries'
+import { Route as AppCrmGtmRouteImport } from './routes/_app.crm.gtm'
 import { Route as AppCrmDealsRouteImport } from './routes/_app.crm.deals'
 import { Route as AppCrmContactsRouteImport } from './routes/_app.crm.contacts'
 import { Route as AppCrmBriefingRouteImport } from './routes/_app.crm.briefing'
@@ -52,6 +56,26 @@ const AppCrmIndexRoute = AppCrmIndexRouteImport.update({
 const AppCrmTasksRoute = AppCrmTasksRouteImport.update({
   id: '/tasks',
   path: '/tasks',
+  getParentRoute: () => AppCrmRoute,
+} as any)
+const AppCrmRoiRoute = AppCrmRoiRouteImport.update({
+  id: '/roi',
+  path: '/roi',
+  getParentRoute: () => AppCrmRoute,
+} as any)
+const AppCrmRoadmapRoute = AppCrmRoadmapRouteImport.update({
+  id: '/roadmap',
+  path: '/roadmap',
+  getParentRoute: () => AppCrmRoute,
+} as any)
+const AppCrmIndustriesRoute = AppCrmIndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
+  getParentRoute: () => AppCrmRoute,
+} as any)
+const AppCrmGtmRoute = AppCrmGtmRouteImport.update({
+  id: '/gtm',
+  path: '/gtm',
   getParentRoute: () => AppCrmRoute,
 } as any)
 const AppCrmDealsRoute = AppCrmDealsRouteImport.update({
@@ -108,6 +132,10 @@ export interface FileRoutesByFullPath {
   '/crm/briefing': typeof AppCrmBriefingRoute
   '/crm/contacts': typeof AppCrmContactsRouteWithChildren
   '/crm/deals': typeof AppCrmDealsRouteWithChildren
+  '/crm/gtm': typeof AppCrmGtmRoute
+  '/crm/industries': typeof AppCrmIndustriesRoute
+  '/crm/roadmap': typeof AppCrmRoadmapRoute
+  '/crm/roi': typeof AppCrmRoiRoute
   '/crm/tasks': typeof AppCrmTasksRouteWithChildren
   '/crm/': typeof AppCrmIndexRoute
   '/crm/contacts/$contactId': typeof AppCrmContactsContactIdRoute
@@ -121,6 +149,10 @@ export interface FileRoutesByTo {
   '/login': typeof LoginRoute
   '/crm/architecture': typeof AppCrmArchitectureRoute
   '/crm/briefing': typeof AppCrmBriefingRoute
+  '/crm/gtm': typeof AppCrmGtmRoute
+  '/crm/industries': typeof AppCrmIndustriesRoute
+  '/crm/roadmap': typeof AppCrmRoadmapRoute
+  '/crm/roi': typeof AppCrmRoiRoute
   '/crm': typeof AppCrmIndexRoute
   '/crm/contacts/$contactId': typeof AppCrmContactsContactIdRoute
   '/crm/deals/$dealId': typeof AppCrmDealsDealIdRoute
@@ -138,6 +170,10 @@ export interface FileRoutesById {
   '/_app/crm/briefing': typeof AppCrmBriefingRoute
   '/_app/crm/contacts': typeof AppCrmContactsRouteWithChildren
   '/_app/crm/deals': typeof AppCrmDealsRouteWithChildren
+  '/_app/crm/gtm': typeof AppCrmGtmRoute
+  '/_app/crm/industries': typeof AppCrmIndustriesRoute
+  '/_app/crm/roadmap': typeof AppCrmRoadmapRoute
+  '/_app/crm/roi': typeof AppCrmRoiRoute
   '/_app/crm/tasks': typeof AppCrmTasksRouteWithChildren
   '/_app/crm/': typeof AppCrmIndexRoute
   '/_app/crm/contacts/$contactId': typeof AppCrmContactsContactIdRoute
@@ -156,6 +192,10 @@ export interface FileRouteTypes {
     | '/crm/briefing'
     | '/crm/contacts'
     | '/crm/deals'
+    | '/crm/gtm'
+    | '/crm/industries'
+    | '/crm/roadmap'
+    | '/crm/roi'
     | '/crm/tasks'
     | '/crm/'
     | '/crm/contacts/$contactId'
@@ -169,6 +209,10 @@ export interface FileRouteTypes {
     | '/login'
     | '/crm/architecture'
     | '/crm/briefing'
+    | '/crm/gtm'
+    | '/crm/industries'
+    | '/crm/roadmap'
+    | '/crm/roi'
     | '/crm'
     | '/crm/contacts/$contactId'
     | '/crm/deals/$dealId'
@@ -185,6 +229,10 @@ export interface FileRouteTypes {
     | '/_app/crm/briefing'
     | '/_app/crm/contacts'
     | '/_app/crm/deals'
+    | '/_app/crm/gtm'
+    | '/_app/crm/industries'
+    | '/_app/crm/roadmap'
+    | '/_app/crm/roi'
     | '/_app/crm/tasks'
     | '/_app/crm/'
     | '/_app/crm/contacts/$contactId'
@@ -242,6 +290,34 @@ declare module '@tanstack/react-router' {
       path: '/tasks'
       fullPath: '/crm/tasks'
       preLoaderRoute: typeof AppCrmTasksRouteImport
+      parentRoute: typeof AppCrmRoute
+    }
+    '/_app/crm/roi': {
+      id: '/_app/crm/roi'
+      path: '/roi'
+      fullPath: '/crm/roi'
+      preLoaderRoute: typeof AppCrmRoiRouteImport
+      parentRoute: typeof AppCrmRoute
+    }
+    '/_app/crm/roadmap': {
+      id: '/_app/crm/roadmap'
+      path: '/roadmap'
+      fullPath: '/crm/roadmap'
+      preLoaderRoute: typeof AppCrmRoadmapRouteImport
+      parentRoute: typeof AppCrmRoute
+    }
+    '/_app/crm/industries': {
+      id: '/_app/crm/industries'
+      path: '/industries'
+      fullPath: '/crm/industries'
+      preLoaderRoute: typeof AppCrmIndustriesRouteImport
+      parentRoute: typeof AppCrmRoute
+    }
+    '/_app/crm/gtm': {
+      id: '/_app/crm/gtm'
+      path: '/gtm'
+      fullPath: '/crm/gtm'
+      preLoaderRoute: typeof AppCrmGtmRouteImport
       parentRoute: typeof AppCrmRoute
     }
     '/_app/crm/deals': {
@@ -355,6 +431,10 @@ interface AppCrmRouteChildren {
   AppCrmBriefingRoute: typeof AppCrmBriefingRoute
   AppCrmContactsRoute: typeof AppCrmContactsRouteWithChildren
   AppCrmDealsRoute: typeof AppCrmDealsRouteWithChildren
+  AppCrmGtmRoute: typeof AppCrmGtmRoute
+  AppCrmIndustriesRoute: typeof AppCrmIndustriesRoute
+  AppCrmRoadmapRoute: typeof AppCrmRoadmapRoute
+  AppCrmRoiRoute: typeof AppCrmRoiRoute
   AppCrmTasksRoute: typeof AppCrmTasksRouteWithChildren
   AppCrmIndexRoute: typeof AppCrmIndexRoute
 }
@@ -364,6 +444,10 @@ const AppCrmRouteChildren: AppCrmRouteChildren = {
   AppCrmBriefingRoute: AppCrmBriefingRoute,
   AppCrmContactsRoute: AppCrmContactsRouteWithChildren,
   AppCrmDealsRoute: AppCrmDealsRouteWithChildren,
+  AppCrmGtmRoute: AppCrmGtmRoute,
+  AppCrmIndustriesRoute: AppCrmIndustriesRoute,
+  AppCrmRoadmapRoute: AppCrmRoadmapRoute,
+  AppCrmRoiRoute: AppCrmRoiRoute,
   AppCrmTasksRoute: AppCrmTasksRouteWithChildren,
   AppCrmIndexRoute: AppCrmIndexRoute,
 }
