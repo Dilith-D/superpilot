@@ -323,21 +323,42 @@ The data exists. It just hasn't been interpreted.
 
 ## Prototype Navigation
 
-/ — Landing page (product marketing story + ROI calculator)
+/ — Landing page: problem narrative, relay race handoff diagram, intelligence
+    surfaces demo, interactive ROI section (dark band — live sliders for reps,
+    calls/day, deal value → computed time saved and revenue impact), final CTA
 /login — Dummy login (pre-filled, click Sign in to enter)
 /crm — CRM home with SuperPilot Deal Intelligence Feed
-/crm/deals — Pipeline view with all 6 deals
-/crm/deals/acme-corp — Hero screen: full deal record, all SuperPilot features
-/crm/contacts — Contacts list (10 contacts)
-/crm/contacts/priya-mehta — Contact record with SuperPilot contact brief
-/crm/roi — ROI Calculator: interactive, team-size adjustable
-/crm/roadmap — V1/V2/V3 visual roadmap with adoption strategy
-/crm/gtm — GTM: ICP, wedge, pricing, competitive positioning, expansion
-/crm/industries — SuperPilot across B2B SaaS, EdTech, BFSI, Real Estate, Healthcare
-/crm/architecture — AI architecture and orchestration technical deep dive
+/crm/briefing — Morning briefing: prioritised deal alerts, risk flags, follow-up queue
+/crm/deals — Pipeline view with all 6 active deals
+/crm/deals/acme-corp — Hero screen: full deal record with all SuperPilot features live
+                        (pre-call brief, post-call extraction panel, handoff brief,
+                        transcript modal, follow-up email draft, deal memory timeline)
+/crm/contacts — Contacts list (10 realistic contacts across all deals)
+/crm/contacts/priya-mehta — Contact record with SuperPilot contact intelligence brief
+/crm/tasks — Task list with open/completed task management (badge count in sidebar)
+/crm/roi — ROI Calculator page: before/after comparison table, interactive calculator,
+            "Beyond Productivity" impact cards, math-in-plain-English summary
+/crm/roadmap — V1/V2/V3 visual phase timeline, feature cards, MVP scope,
+               3-phase adoption strategy
+/crm/gtm — GTM strategy: ICP card, 3-step wedge flow, competitive comparison table
+            (HubSpot/Salesforce vs SuperPilot), 3-tier pricing, expansion funnel,
+            competitive moat cards
+/crm/industries — SuperPilot across 5 verticals: B2B SaaS (primary), EdTech, BFSI,
+                  Real Estate, Healthcare — each with user persona, problem, feature
+                  preview box, and quantified impact
+/crm/architecture — AI architecture: capability audit table, three-layer architecture
+                    diagram, 4 AI components with code blocks, orchestration patterns
+                    (sequential pipeline, parallel fan-out, batch monitoring),
+                    production constraints, technology stack
 
-A guided tour auto-starts after login. 7 steps, covers all key
-SuperPilot moments. Dismissible. Replayable from the header.
+Sidebar structure: two nav groups separated by dividers.
+Group 1 (core CRM): Home, Briefing, Deals, Contacts, Tasks.
+Group 2 (SuperPilot intelligence): ROI, Roadmap, GTM, Industries, Architecture.
+
+A guided tour auto-starts after login. 7 steps, covers all key SuperPilot
+moments. Step 1 is a full-screen product brief modal. Steps 2-7 are bottom
+cards with chapter labels and pain context chips. Dismissible. Replayable
+from the header.
 
 ---
 
