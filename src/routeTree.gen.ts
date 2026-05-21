@@ -18,6 +18,7 @@ import { Route as AppCrmTasksRouteImport } from './routes/_app.crm.tasks'
 import { Route as AppCrmDealsRouteImport } from './routes/_app.crm.deals'
 import { Route as AppCrmContactsRouteImport } from './routes/_app.crm.contacts'
 import { Route as AppCrmBriefingRouteImport } from './routes/_app.crm.briefing'
+import { Route as AppCrmArchitectureRouteImport } from './routes/_app.crm.architecture'
 import { Route as AppCrmTasksIndexRouteImport } from './routes/_app.crm.tasks.index'
 import { Route as AppCrmDealsIndexRouteImport } from './routes/_app.crm.deals.index'
 import { Route as AppCrmContactsIndexRouteImport } from './routes/_app.crm.contacts.index'
@@ -68,6 +69,11 @@ const AppCrmBriefingRoute = AppCrmBriefingRouteImport.update({
   path: '/briefing',
   getParentRoute: () => AppCrmRoute,
 } as any)
+const AppCrmArchitectureRoute = AppCrmArchitectureRouteImport.update({
+  id: '/architecture',
+  path: '/architecture',
+  getParentRoute: () => AppCrmRoute,
+} as any)
 const AppCrmTasksIndexRoute = AppCrmTasksIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -98,6 +104,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
   '/crm': typeof AppCrmRouteWithChildren
+  '/crm/architecture': typeof AppCrmArchitectureRoute
   '/crm/briefing': typeof AppCrmBriefingRoute
   '/crm/contacts': typeof AppCrmContactsRouteWithChildren
   '/crm/deals': typeof AppCrmDealsRouteWithChildren
@@ -112,6 +119,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
+  '/crm/architecture': typeof AppCrmArchitectureRoute
   '/crm/briefing': typeof AppCrmBriefingRoute
   '/crm': typeof AppCrmIndexRoute
   '/crm/contacts/$contactId': typeof AppCrmContactsContactIdRoute
@@ -126,6 +134,7 @@ export interface FileRoutesById {
   '/_app': typeof AppRouteWithChildren
   '/login': typeof LoginRoute
   '/_app/crm': typeof AppCrmRouteWithChildren
+  '/_app/crm/architecture': typeof AppCrmArchitectureRoute
   '/_app/crm/briefing': typeof AppCrmBriefingRoute
   '/_app/crm/contacts': typeof AppCrmContactsRouteWithChildren
   '/_app/crm/deals': typeof AppCrmDealsRouteWithChildren
@@ -143,6 +152,7 @@ export interface FileRouteTypes {
     | '/'
     | '/login'
     | '/crm'
+    | '/crm/architecture'
     | '/crm/briefing'
     | '/crm/contacts'
     | '/crm/deals'
@@ -157,6 +167,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/login'
+    | '/crm/architecture'
     | '/crm/briefing'
     | '/crm'
     | '/crm/contacts/$contactId'
@@ -170,6 +181,7 @@ export interface FileRouteTypes {
     | '/_app'
     | '/login'
     | '/_app/crm'
+    | '/_app/crm/architecture'
     | '/_app/crm/briefing'
     | '/_app/crm/contacts'
     | '/_app/crm/deals'
@@ -253,6 +265,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppCrmBriefingRouteImport
       parentRoute: typeof AppCrmRoute
     }
+    '/_app/crm/architecture': {
+      id: '/_app/crm/architecture'
+      path: '/architecture'
+      fullPath: '/crm/architecture'
+      preLoaderRoute: typeof AppCrmArchitectureRouteImport
+      parentRoute: typeof AppCrmRoute
+    }
     '/_app/crm/tasks/': {
       id: '/_app/crm/tasks/'
       path: '/'
@@ -332,6 +351,7 @@ const AppCrmTasksRouteWithChildren = AppCrmTasksRoute._addFileChildren(
 )
 
 interface AppCrmRouteChildren {
+  AppCrmArchitectureRoute: typeof AppCrmArchitectureRoute
   AppCrmBriefingRoute: typeof AppCrmBriefingRoute
   AppCrmContactsRoute: typeof AppCrmContactsRouteWithChildren
   AppCrmDealsRoute: typeof AppCrmDealsRouteWithChildren
@@ -340,6 +360,7 @@ interface AppCrmRouteChildren {
 }
 
 const AppCrmRouteChildren: AppCrmRouteChildren = {
+  AppCrmArchitectureRoute: AppCrmArchitectureRoute,
   AppCrmBriefingRoute: AppCrmBriefingRoute,
   AppCrmContactsRoute: AppCrmContactsRouteWithChildren,
   AppCrmDealsRoute: AppCrmDealsRouteWithChildren,

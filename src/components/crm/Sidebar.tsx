@@ -7,6 +7,7 @@ import {
   Sun,
   LogOut,
   Settings,
+  Cpu,
 } from "lucide-react";
 import { signOut } from "@/lib/session";
 import { openTaskCount } from "@/lib/crm-data";
@@ -25,6 +26,7 @@ const nav: NavItem[] = [
   { to: "/crm/deals", label: "Deals", icon: Briefcase, exact: false },
   { to: "/crm/contacts", label: "Contacts", icon: Users, exact: false },
   { to: "/crm/tasks", label: "Tasks", icon: CheckSquare, exact: false, badge: openTaskCount },
+  { to: "/crm/architecture", label: "Architecture", icon: Cpu, exact: false },
 ];
 
 export function Sidebar() {
