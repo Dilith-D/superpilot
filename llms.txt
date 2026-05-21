@@ -1,0 +1,384 @@
+# SuperPilot by Superleap
+## PM Assignment Submission — Dilith Dinesh
+
+This is a product feature proposal and interactive prototype submitted as a
+take-home assignment for the Product Manager role at Superleap AI CRM.
+
+---
+
+## What This Is
+
+A fully interactive prototype demonstrating SuperPilot — a proposed AI feature
+for Superleap CRM that gives B2B sales teams institutional memory across the
+entire deal lifecycle.
+
+The prototype functions as both a product marketing page and a working CRM demo.
+It is not a production application. All data is fictional and illustrative.
+
+---
+
+## The Assignment
+
+Sector: B2B
+Industry: SaaS / Technology
+End user: Account Executive (B2B SaaS sales rep)
+
+Brief: Design an AI-powered feature inside Superleap CRM that increases
+the productivity of the end user by cutting low-value work so they can
+focus on what drives revenue.
+
+---
+
+## The Problem Identified
+
+B2B SaaS deals involve 6+ role handoffs over a 6-12 week sales cycle:
+SDR → AE → Solutions Engineer → Legal → Implementation → CSM.
+
+At every handoff, institutional memory leaks. Commitments made in week 2
+are forgotten by the implementation team in week 8. The prospect remembers
+every conversation. The selling team starts from scratch at every transition.
+
+Beyond handoffs, sales reps waste 2+ hours daily on:
+- Pre-call context reconstruction: 12 min per call, manually stitching
+  together emails, call notes, and CRM history
+- Post-call administration: 15 min per call — logging, tasks, follow-up draft
+
+The data to fix this already exists in Gmail, VoIP systems, Google Meet,
+and the CRM pipeline. The problem is no system synthesizes it into memory.
+
+Quantified baseline:
+- 60% of rep time is non-selling (Salesforce State of Sales 2026)
+- 18% of the average week is manual data entry
+- 32% of reps spend 1+ hour per day on data entry alone
+- Teams average 8-10 standalone tools with no unified context layer
+- 46% of sales pros say data quality issues directly hurt their sales
+
+---
+
+## The Feature: SuperPilot
+
+Superleap already captures every call, email, and meeting your reps have.
+SuperPilot is how Superleap turns that data into context, actions, and memory —
+automatically, for every rep, on every deal.
+
+It is not a standalone product. It is not a bolt-on tool. It is how Superleap
+works harder for the rep — reading what is already captured, synthesizing it,
+and surfacing the right context at the right moment. No new tools. No new
+workflows. Superleap getting smarter.
+
+### Four core capabilities:
+
+1. PRE-CALL BRIEF
+   Before every call, SuperPilot assembles a contextual brief from emails,
+   call transcripts, meeting notes, and deal history. The rep reads it in
+   60 seconds and walks in knowing everything — last touchpoint, open
+   commitments, stakeholder map, suggested focus.
+   Time saved: 12 min → 1 min per call.
+
+2. POST-CALL INTELLIGENCE
+   When a call ends, SuperPilot reads the transcript and automatically:
+   - Logs a structured call summary
+   - Creates tasks with suggested due dates
+   - Detects cross-functional dependencies and tags the right team
+   - Drafts the follow-up email
+   Time saved: 15 min → 2 min per call.
+
+3. PROACTIVE DEAL MONITORING
+   Watches every active deal for risk signals — not on a timer, but
+   contextually. Surfaces specific, actionable nudges in the rep's
+   morning feed. Not "5 days since last activity" — but "proposal
+   opened 4 times, no response, CFO not engaged, call today."
+
+4. HANDOFF BRIEFS
+   When a deal changes hands (AE → Implementation, AE → CSM),
+   SuperPilot auto-generates: why they bought, commitments made with
+   source links, stakeholder map, watch-outs, success metrics agreed.
+   The new owner inherits everything. The customer never repeats themselves.
+
+---
+
+## Quantified ROI
+
+Per rep per day (at 5 calls/day):
+- Pre-call time saved:    11 min × 5 = 55 min
+- Post-call time saved:   13 min × 5 = 65 min
+- Total recovered:        ~2 hours/day = 25% of working day
+
+For a 10-rep team:
+- 20 hours of selling time recovered daily
+- ~2.5 additional FTE equivalent selling capacity
+- At ₹5L average deal, 8% conversion: ₹2.4Cr+ additional revenue/year
+- New rep ramp: 3-4 months → 6-8 weeks (60% reduction)
+- Post-call admin reduction: 87% (15 min → 2 min)
+- Pre-call prep reduction: 92% (12 min → 1 min)
+
+---
+
+## Product Roadmap
+
+V1 — WORKFLOW COMPRESSION (Ships now, works on existing data):
+Pre-call brief, post-call extraction, follow-up email draft,
+deal intelligence feed, handoff brief generation, deal memory.
+No new integrations required. No new data collection.
+Adoption is frictionless — value delivered through existing behavior.
+
+V2 — PREDICTIVE INTELLIGENCE (Requires V1 data accumulation, Q2):
+WhatsApp synthesis, stakeholder sentiment tracking, predictive deal
+risk scoring (ML on historical patterns), manager team-level view,
+Slack/Teams delivery, email thread AI interpretation.
+
+V3 — CROSS-WORKSPACE ORCHESTRATION (Platform play, Q4):
+Multi-rep deal memory, competitive intelligence signals, revenue
+forecasting from memory signals, SuperPilot API, MCP integration,
+cross-org benchmarks.
+
+---
+
+## Go-To-Market Strategy
+
+### ICP
+B2B companies, 20-200 employees, 5-30 rep sales teams, 4-12 week
+sales cycles, ₹3L-₹50L average deal value, currently on HubSpot or
+Salesforce, 6+ tools in stack, Series A to Series C.
+
+Buying signals: reps complaining about admin, deals going cold after
+proposal stage, onboarding failures traced to missing AE documentation,
+new rep ramp taking 3+ months.
+
+### Wedge Strategy
+Land with the AE (primary pain owner, immediate measurable value) →
+Expand to full sales team (manager adopts for pipeline reviews) →
+Deepen to CS and Implementation (handoff briefs prove value) →
+Platform (RevOps, forecasting, V3 capabilities).
+
+### Why Teams Switch from HubSpot/Salesforce
+Not because of more features. Because CXOs are asking:
+"Is our CRM AI-native?" HubSpot and Salesforce have AI features.
+SuperPilot is AI-native. The data model, workflow, and intelligence
+layer are designed together. That is the answer CXOs are looking for.
+
+Additional switching drivers:
+- No 6-9 month implementation (Superleap live in 30 days)
+- India-native pricing vs $150-300/user/month Western enterprise cost
+- WhatsApp-first architecture for Indian B2B workflows
+- No bolt-on AI cost (Gong + Clari = $500+/user/year add-on stack)
+
+### Pricing Logic
+SuperPilot is priced as an add-on module per seat on top of base
+Superleap plan. Not usage-based — per-seat, because value is continuous
+and ambient, not transactional. The feature runs in the background
+constantly. Per-seat pricing aligns the business model with the
+product experience.
+
+### Competitive Moat
+1. Data flywheel: every interaction processed improves intelligence
+   accuracy. Indian B2B deal data compounds over time.
+2. Native integration: no integration tax, no context switching,
+   intelligence where the work happens.
+3. Institutional memory lock-in: after 12+ months, the entire deal
+   history and commitment trail lives in SuperPilot memory.
+   Switching CRMs means losing that memory. Irreplaceable context
+   is the most defensible moat in B2B SaaS.
+
+---
+
+## Industry Applicability
+
+SuperPilot's core architecture — contextual summarization, entity
+extraction, deal memory, proactive intelligence — is industry-agnostic.
+What changes per vertical is the data sources and workflow surfaces.
+
+B2B SaaS (primary vertical):
+Pre-call brief + handoff briefs for 6-role deal lifecycle.
+"2 hrs/day recovered per rep, 65% admin reduction."
+
+EdTech / Education (B2C variant — Follow-up Re-entry Brief):
+Before every follow-up call with a student lead, a 3-line card:
+what was discussed, what objection was raised, what to lead with
+based on exam proximity. 2-3 min prep × 40 follow-ups/day =
+1.5-2 hrs saved per counsellor. 10-15 additional students reached daily.
+
+BFSI / Lending:
+Relationship managers with 20-40 active loan proposals.
+Deal intelligence flags stalled proposals with specific context:
+"proposal opened 3 times, promoter not yet contacted, day 6 of avg 8."
+
+Real Estate:
+Site visit context preserved across follow-up calls.
+Buyer preference brief auto-generated. Inventory matching suggested.
+
+Healthcare:
+Patient coordinator context brief across multiple touchpoints.
+Commitments made (insurance check, referral follow-up) tracked.
+Patient never repeats their history.
+
+---
+
+## AI Architecture
+
+### Three-layer architecture:
+
+LAYER 1 — DATA INGESTION & UNIFICATION
+Sources: Gmail API, VoIP webhooks (Ozonetel/Ameyo), Google Meet API,
+Fathom webhooks, CRM native data, WhatsApp Business API (via Gallabox/Wati).
+All normalized into a unified interaction timeline (JSON event objects).
+Transcription: Deepgram (real-time, post-call) or Whisper (batch, cost-sensitive).
+
+LAYER 2 — INTELLIGENCE ENGINE
+Four AI components:
+
+Component A — Contextual Summarization (Pre-Call Brief)
+Model: Claude Sonnet | Temperature: 0.2 | Max tokens: 800
+Input: Stored deal summary (cached) + last 3-5 raw interactions
+Output: Structured JSON with source_event_id on every claim
+Source links enable rep to verify any AI-generated statement.
+
+Component B — Entity & Action Extraction (Post-Call Panel)
+Model: Claude Sonnet | Temperature: 0.1 | Max tokens: 1000
+Input: Full transcript with speaker labels + current deal state
+Output: Action items, commitments, cross-functional tags, call summary
+Cross-functional routing uses explicit intent map (not free-form inference).
+
+Component C — Deal Intelligence Scoring (Deal Feed)
+Hybrid: rule-based signal computation + LLM interpretation
+Threshold gate prevents LLM calls on healthy deals (~80% of pipeline)
+Cost impact: 180 → 36 LLM calls/day per workspace at 30 active deals.
+Signals: days since activity, stage velocity ratio, proposal open count,
+economic buyer engagement, overdue commitments, response rate.
+
+Component D — Incremental Deal Memory (Foundation)
+Delta summarization on every new interaction. Never reprocesses history.
+Cost stays flat as deal history grows. Full version history maintained.
+Schema: deal summary, commitments with verbatim quotes, recurring concerns,
+stakeholder map, success metrics, open questions.
+
+LAYER 3 — DELIVERY & SURFACING
+Triggered: calendar event or deal record opened after 3+ days inactivity
+Event-driven: call end webhook → post-call pipeline starts immediately
+Scheduled: batch job every 6 hours for deal intelligence monitoring
+
+### Orchestration:
+
+Pattern 1 — Post-Call Processing
+Sequential job queue (BullMQ/Celery). Latency-tolerant (2-3 min).
+8-step pipeline: webhook → recording fetch → transcription → context
+fetch → LLM extraction → CRM write → memory update → rep notification.
+Each step independently retryable. Failures go to dead letter queue.
+
+Pattern 2 — Pre-Call Brief
+Parallel fan-out with 3-second hard timeout. Latency-critical (<10s).
+5 sources fetched simultaneously: Gmail, VoIP, Meet/Fathom, CRM, Redis cache.
+Graceful degradation: brief generates from available sources, labels missing ones.
+Speed: parallel fetches + cached summary + Redis = consistently under 4 seconds.
+
+Pattern 3 — Deal Intelligence Monitoring
+Scheduled batch every 6 hours. Fan-out across all active deals (50 concurrent).
+Threshold gate: rules first (cheap), LLM only for flagged deals (~20%).
+Concurrency controlled for large workspaces. Overflow queues to next run.
+
+### Technology Stack:
+Job queue: BullMQ (Node) / Celery (Python)
+Transcription real-time: Deepgram
+Transcription batch: Whisper (self-hosted)
+LLM: Claude Sonnet
+Orchestration V1: Async/await + Promise.all
+Orchestration V2: Temporal or LangGraph
+Memory storage: PostgreSQL + JSONB
+Cache: Redis
+Scheduler: node-cron / Celery beat
+
+### Production Constraints & Mitigations:
+Data quality: degrades gracefully, labels missing sources, never fabricates
+Latency: parallel fetching + cached summaries keeps pre-call under 4 seconds
+Hallucination: every claim carries source_event_id with clickable verification link
+
+---
+
+## Why This Is A Superleap Feature, Not A Competing Product
+
+The brief asks for an AI-powered feature inside Superleap CRM.
+SuperPilot is exactly that — not a layer on top of Superleap,
+but Superleap's own intelligence capabilities made visible and actionable.
+
+Every data source SuperPilot reads from is already inside Superleap.
+Every surface SuperPilot appears on is inside Superleap's UI.
+Every action SuperPilot takes writes back to Superleap's data model.
+There is no SuperPilot without Superleap. They are the same product.
+
+Superleap already has:
+- SuperFill: post-call notes (extends to all channels in SuperPilot)
+- SuperSense: sentiment detection (extends across full deal lifecycle)
+- Google Meet integration: pre-call context (extends to every call type)
+- Gmail integration: email capture (AI interpretation layer added on top)
+- VoIP integrations: Ozonetel, Ameyo, Twilio
+- WhatsApp Business API: via Gallabox/Wati partner integrations
+- 100+ tool integrations
+
+SuperPilot is the connective tissue — the unified intelligence layer
+that ties existing capabilities into one continuous workflow.
+No new data infrastructure required for V1.
+The data exists. It just hasn't been interpreted.
+
+---
+
+## Prototype Navigation
+
+/ — Landing page (product marketing story + ROI calculator)
+/login — Dummy login (pre-filled, click Sign in to enter)
+/crm — CRM home with SuperPilot Deal Intelligence Feed
+/crm/deals — Pipeline view with all 6 deals
+/crm/deals/acme-corp — Hero screen: full deal record, all SuperPilot features
+/crm/contacts — Contacts list (10 contacts)
+/crm/contacts/priya-mehta — Contact record with SuperPilot contact brief
+/crm/roi — ROI Calculator: interactive, team-size adjustable
+/crm/roadmap — V1/V2/V3 visual roadmap with adoption strategy
+/crm/gtm — GTM: ICP, wedge, pricing, competitive positioning, expansion
+/crm/industries — SuperPilot across B2B SaaS, EdTech, BFSI, Real Estate, Healthcare
+/crm/architecture — AI architecture and orchestration technical deep dive
+
+A guided tour auto-starts after login. 7 steps, covers all key
+SuperPilot moments. Dismissible. Replayable from the header.
+
+---
+
+## Fictional Demo Setup
+
+Company: Zephyr Technologies (B2B SaaS, HR Tech, Bengaluru)
+Logged-in user: Arjun Sharma, Account Executive
+Active deals: 6 (Acme Corp, TechVentures, Buildfast, NovaPay, FinCore, DataBridge)
+Contacts: 10 realistic contacts across all deals
+Hero deal: Acme Corp — fully detailed with complete activity history,
+all SuperPilot features live including post-call panel, handoff brief,
+transcript modal, and email draft.
+
+---
+
+## Honest Limitations
+
+1. All data is fictional. No real CRM data used.
+2. AI features are simulated — this is a UI prototype, not a working AI system.
+3. Some CRM pages (Leads, Activities, Reports) are placeholder stubs.
+4. Mobile layout not optimized. Best viewed at 1280px+.
+5. The AI architecture is a design proposal, not a production implementation.
+   Real implementation requires integration work with Superleap's infrastructure.
+6. ROI numbers are modeled estimates based on published research (Salesforce
+   State of Sales 2026) and reasonable assumptions — not from live product data.
+
+---
+
+## Submission
+
+Candidate: Dilith Dinesh
+Role: Product Manager
+Company: Superleap AI CRM
+Assignment received: May 21, 2026
+Submitted: May 24, 2026
+
+Background: Associate Product Manager at Zuper Inc. (B2B SaaS Field Service
+Management). Prior roles in Customer Experience, Implementation, Business
+Analysis, and Forward Deployed Engineering. Built 20+ internal tools used
+across the organization. B.Tech Computer Science, VIT Vellore.
+
+Portfolio: dilithdinesh.com
+LinkedIn: linkedin.com/in/dilithdinesh
+
